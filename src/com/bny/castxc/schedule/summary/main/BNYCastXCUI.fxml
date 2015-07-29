@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox id="topVbox" alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1280.0" stylesheets="application.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.bny.castxc.schedule.summary.main.FileChooserController">
+   <children>
+      <Label text="BNC CAST-XC Utility">
+         <font>
+            <Font name="System Bold" size="41.0" />
+         </font>
+      </Label>
+      <HBox alignment="CENTER" layoutY="100.0" prefHeight="100.0" prefWidth="200.0">
+         <children>
+            <Text fx:id="fileName" strokeType="OUTSIDE" strokeWidth="0.0" text="Select XSLX (Spreadsheet) File ==&gt;" textAlignment="CENTER" wrappingWidth="705.345703125">
+               <font>
+                  <Font size="24.0" />
+               </font>
+               <HBox.margin>
+                  <Insets right="20.0" />
+               </HBox.margin></Text>
+            <Button fx:id="btnValidate" mnemonicParsing="false" onAction="#btnValidateOnClick" text="Select a File">
+               <font>
+                  <Font size="20.0" />
+               </font></Button>
+         </children>
+      </HBox>
+      <Button fx:id="btnGenerate" disable="true" mnemonicParsing="false" onAction="#goGenerate" text="Generate XML">
+         <font>
+            <Font size="30.0" />
+         </font></Button>
+      <TextArea fx:id="errMsg" prefHeight="500.0" prefWidth="200.0" text="System Messages  will appear here. Go ahead and choose a Valid XSLX file by clicking on Select File">
+         <VBox.margin>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+         </VBox.margin></TextArea>
+   </children>
+</VBox>
